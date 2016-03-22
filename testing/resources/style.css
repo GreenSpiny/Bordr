@@ -1,11 +1,15 @@
 body {
   background-color: #775644;
+  margin: 0px;
+  padding: 0px;
 }
 
 #header img {
   height: auto;
   max-width: 100%;
   margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
   display: block;
   padding: 0px;
 }
