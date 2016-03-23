@@ -25,6 +25,7 @@ body {
 .page {
     position: relative;
     top: 0px;
+    text-align: center;
 }
 
 #header img {
@@ -61,13 +62,27 @@ body {
   margin-top: 5px;
 }
 
-#login button {
+#mainmenu {
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+}
+
+.pageButton {
   background-color: #a38571;
   margin-bottom: 13px;
   border: 1px solid #3d3434;
   border-radius: 8px;
 }
 
-#login button:hover {
+.pageButton:hover {
   background-color: #3d3434;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #201a1a;
+  position: relative;
+  margin: 15px;
 }

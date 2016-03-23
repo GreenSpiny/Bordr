@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   // Transition to different pages
   $(".pageButton").click(function(){
-    goToPage($(this).val());
+    goToPage($(this).attr("value"));
   });
   
 });
@@ -24,23 +24,28 @@ $(document).ready(function() {
 // Helper functions --- o
 function goToPage(num) {
 
+  var fadeValue = 0;
+  if (page > 0 && num > 0) {
+    fadeValue = 300;
+  }
+
   $(".page").each(function(){
-    if ($(this).val() == num) {
-      $(this).fadeIn(500);
+    if ($(this).attr("value") == num) {
+      $(this).fadeIn(fadeValue);
     }
     else {
-      $(this).fadeOut(500);
+      $(this).hide();
     }
   });
   
-  page = num;
-  
-  if (page > 0) {
+  if (num > 0 && page <= 0) {
     scroll("up",1000);
   }
-  else {
+  else if (num <=0 && page > 0) {
     scroll("down",1000);
   }
+  
+  page = num;
 }
 
 function scroll(direction, duration) {
