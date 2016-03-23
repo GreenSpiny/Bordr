@@ -14,9 +14,9 @@ $(document).ready(function() {
     }
   });
 
-  // Login -> Homepage
-  $("#loginBTN").click(function(){
-    goToPage(1);
+  // Transition to different pages
+  $(".pageButton").click(function(){
+    goToPage($(this).val());
   });
   
 });
@@ -26,7 +26,7 @@ function goToPage(num) {
 
   $(".page").each(function(){
     if ($(this).val() == num) {
-      $(this).show();
+      $(this).fadeIn(500);
     }
     else {
       $(this).fadeOut(500);
