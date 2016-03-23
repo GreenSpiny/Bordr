@@ -21,8 +21,32 @@
 
   <body>
   
-  <div id="header" class="container-fluid">
-    <img id="logo" src="resources/images/raccoon_small.png"> </img>  
+  <div id="header">
+    <img id="logo" src="resources/images/raccoon_small.png"> </img>
+  </div>
+  
+  <div id="content" class="container-fluid">
+  
+    <div id="login" class="page" value="0">
+      
+      <div class="form-group row-fluid">
+        <label for="user">Username:</label>
+        <input type="text" class="form-control input-sm" id="user"> </input>
+        <label for="password">Password:</label>
+        <input type="text" class="form-control input-sm" id="password"> </input>
+      </div>
+      
+      <div class="row-fluid">
+        <div class="col-sm-6">
+          <button id="loginBTN" type="button" class="btn btn-block btn-success">Log In</button>
+        </div>
+        <div class="col-sm-6"> 
+          <button id="signupBTN" type="button" class="btn btn-block btn-primary">Sign Up</button>
+        </div>
+      </div>
+      
+    </div>
+  
   </div>
 
     <!-- Bootstrap core JavaScript
