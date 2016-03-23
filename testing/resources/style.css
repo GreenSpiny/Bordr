@@ -80,7 +80,8 @@ body {
 }
 
 h1 {
-  font-size: 18px;
+  font-family: Calibri;
+  font-size: 20px;
   font-weight: 700;
   color: #201a1a;
   position: relative;
