@@ -17,6 +17,14 @@ body {
     float: left;
     margin: 0px;
     padding: 0px;
+    
+    position: relative;
+    top: 0px;
+}
+
+.page {
+    position: relative;
+    top: 0px;
 }
 
 #header img {
