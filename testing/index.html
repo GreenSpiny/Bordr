@@ -12,12 +12,13 @@
     <link href="resources/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles -->
-    <link href="resources/style.css" rel="stylesheet">  
+    <link href="resources/css/style.css" rel="stylesheet">  
     
     <!-- Custom JS -->
     <script src="resources/jquery-2.1.4.min.js"></script>
-    <script src="resources/transitions.js"></script>
-
+    <script src="resources/js/transitions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="resources/js/post.js"></script>
   </head>
 
   <body>
@@ -29,24 +30,25 @@
   <div id="content" class="container-fluid">
   
     <!-- oooooooooooooooooooooooooo -->
-    <div id="login" class="page" value="0">
-      
-      <div class="form-group row-fluid">
-        <label for="user">Username:</label>
-        <input type="text" class="form-control input-sm" id="user"> </input>
-        <label for="password">Password:</label>
-        <input type="password" class="form-control input-sm" id="password"> </input>
-      </div>
-      
+    <div id="login" class="page" ng-controller="submit" value="0">
+      <form id="form" ng-submit="login()">
+        <div class="form-group row-fluid">
+          <label for="user">Username:</label>
+          <input type="text" class="form-control input-sm" id="user" ng-model="user"> </input>
+          <label for="password">Password:</label>
+          <input type="password" class="form-control input-sm" id="password" ng-model="password"> </input>
+        </div>
+      </form>
+
       <div class="row-fluid">
         <div class="col-sm-6">
-          <button id="loginBTN" type="button" value=1 class="pageButton btn btn-block btn-primary">Log In</button>
+          <button id="loginBTN" type="submit" form="form" value=1 class="pageButton btn btn-block btn-primary">Log In</button>
         </div>
         <div class="col-sm-6"> 
-          <button id="signupBTN" type="button" value=1 class="pageButton btn btn-block btn-primary">Sign Up</button>
+          <button id="signupBTN" type="submit" value=1 class="pageButton btn btn-block btn-primary">Sign Up</button>
         </div>
       </div>
-      
+
     </div>
     
     <!-- oooooooooooooooooooooooooo -->
