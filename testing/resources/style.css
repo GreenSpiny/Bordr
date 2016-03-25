@@ -68,6 +68,12 @@ body {
   margin: auto;
 }
 
+#eventlist {
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+}
+
 .pageButton {
   background-color: #a38571;
   margin-bottom: 13px;

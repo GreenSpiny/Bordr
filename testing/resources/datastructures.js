@@ -17,12 +17,10 @@ function person() {
 function event() {
   this.id = 0;
   this.name = "";
-  this.genre = "";
+  this.tags = [];
   this.description = "";
-  this.date = "";
-  this.time = "";
   this.creator = "";
-  this.participants = "";
+  this.participants = [];
 }
 
 // Request a user from the database, and deposit the person object into an array
