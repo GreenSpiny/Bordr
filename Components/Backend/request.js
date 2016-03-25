@@ -2,18 +2,10 @@ var request = module.exports =
   function () { 
     // ROUTING
 
-    //mod.http.createServer(function(req, res) {
-     // res.writeHead(200, {
-      //  'Content-Type': 'text/html'
-     // });
-
-     // res.write()
-
     app.get("/", function(req, res) {
       var extension = req.originalUrl;
-      console.log(extension);
       if (extension == '' || extension == '/')
-        res.render(mod.path.join(loc.root, 'testing/index.html'));
+        res.render(mod.path.join(loc.root, 'Components/Pages'));
         //res.sendFile(mod.path.join(loc.pages, 'index.html'));
       //else
         //res.sendFile(mod.path.join(loc.pages, req.originalUrl + '.html'));
@@ -35,7 +27,12 @@ var request = module.exports =
       var user = req.body;
       collection = mongo.db.collection('users');
       collection.findOne({username: user.username, password: user.password}, function(err, record) {
-        console.log(record);
+        if (err != null)
+          res.send("System Error: " + err);
+        else if (record == null)
+          res.send("Credentials Invalid");
+        else
+          res.send("User Found: " + record);
       });
     });
 
