@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   // Transition to different pages
   $(".pageButton").click(function(){
-    goToPage($(this).attr("value"));
+    
   });
   
 });
